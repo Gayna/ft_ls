@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_elm.c                                          :+:      :+:    :+:   */
+/*   flist_swap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nils <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/11 23:41:15 by nils              #+#    #+#             */
-/*   Updated: 2013/12/12 19:49:59 by nils             ###   ########.fr       */
+/*   Created: 2013/12/12 15:15:06 by nils              #+#    #+#             */
+/*   Updated: 2013/12/12 19:54:22 by nils             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "add_elm.h"
+#include "flist_swap.h"
 
-
-t_flist		*add_elm(const char *name)
+void	flist_swap(t_flist *f1, t_flist *f2)
 {
-  t_flist	*new_elm;
+	t_flist	*tmp;
+	t_flist	*next_tmp;
 
-  new_elm = (t_flist *)malloc(sizeof(t_flist) * 1);
-  new_elm->name = ft_strdup(name);
-  new_elm->sstat = NULL;
-  new_elm->next = NULL;
-  return (new_elm);
+	tmp = f1;
+	next_tmp = f1->next;
+	f1 = f2;
+	f2 = tmp;
+	f2->next = f1->next;
+	f1->next = next_tmp;
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: nils <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/11 23:41:53 by nils              #+#    #+#             */
-/*   Updated: 2013/12/11 23:41:59 by nils             ###   ########.fr       */
+/*   Updated: 2013/12/12 19:50:44 by nils             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef ADD_ELM_H
@@ -14,6 +14,6 @@
 
 # include "general.h"
 
-s_flist *add_elm(const char *name);
+t_flist *add_elm(const char *name);
 
 #endif /* !ADD_ELM_H */
